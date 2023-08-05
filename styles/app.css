@@ -1,0 +1,240 @@
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+    /*10px;*/
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    line-height: 1.6;
+    font-size: 1.6rem;
+}
+
+/* container */
+
+.container {
+    width: 100%;
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* reset styles */
+
+a {
+    text-decoration: none;
+}
+
+/* Header */
+
+.header {
+    background-image: url("./../images/headerPhoto.png");
+    background-position: right;
+    background-position-y: bottom;
+    background-repeat: no-repeat;
+    background-size: 100rem;
+    height: 80vh;
+    background-color: black;
+}
+
+.nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2.1rem 0;
+}
+
+/* 
+==============
+    APP LOGO
+==============
+
+*/
+
+.app-logo {}
+
+.app-logo__img {
+    width: 15rem;
+    height: 3.55rem;
+}
+
+/* 
+==============
+    MENU
+==============
+
+*/
+
+.menu {
+    position: fixed;
+    background: rgba(0, 0, 0, 0.87);
+    left: -24rem;
+    top: 0;
+    width: 24rem;
+    height: 100vh;
+    padding: 2.5rem;
+    font-family: Kanit-Light;
+    transition: all 250ms ease-in-out;
+
+}
+
+.menu__item {
+    margin-bottom: 1rem;
+    
+}
+
+
+.menu__link {
+    color: #fff;
+    transition:color 200ms ease-in-out ;
+    -webkit-transition:color 200ms ease-in-out ;
+    -moz-transition:color 200ms ease-in-out ;
+    -ms-transition:color 200ms ease-in-out ;
+    -o-transition:color 200ms ease-in-out ;
+}
+
+.menu__link--active {
+    color: #F00;
+}
+
+.menu__link:hover{
+    color: #F00;
+}
+
+.menu__drop-down {
+    display: none;
+    margin-top: 1rem;
+
+}
+.menu__drop-down-content:first-child{
+    border-bottom: none;
+}
+.menu__drop-down-content {
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+    padding: 1rem;
+    border: .25rem solid #fff;
+    
+}
+.menu__drop-down-content:hover{
+    transition: all 250ms ease-in-out;
+    background-color: #000;
+    color: #F00;
+}
+
+/* 
+=====================
+    HAMBERGER MENU
+=====================
+
+*/
+
+.nav__btn {
+    background-color: #fff;
+    height: 5rem;
+    width: 5rem;
+    border-radius: 2rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all ease-in-out 200ms;
+}
+
+.nav__btn--open .nav__btn-line {
+    background-color: transparent;
+    transition: all ease-in-out 100ms;
+
+}
+
+.nav__btn-line {
+    display: block;
+    width: 3rem;
+    height: .3rem;
+    background-color: #000;
+    border-radius: 1rem;
+    position: relative;
+    transition: all 200ms ease-in-out;
+
+
+}
+
+.nav__btn-line::after,
+.nav__btn-line::before {
+    position: absolute;
+    content: " ";
+    width: 3rem;
+    height: .3rem;
+    background-color: #000;
+    border-radius: 1rem;
+    transition: all 250ms ease-in-out;
+
+}
+
+.nav__btn-line::after {
+    top: .85rem;
+}
+
+.nav__btn-line::before {
+    bottom: .85rem;
+}
+
+.nav__btn--open .nav__btn-line::after {
+    top: 0;
+    transform: rotate(45deg);
+    transition: all 250ms ease-in-out;
+
+}
+
+.nav__btn--open .nav__btn-line::before {
+    bottom: 0;
+    transform: rotate(135deg);
+    transition: all 250ms ease-in-out;
+
+}
+
+/* 
+=====================
+    HEADER CONTENT
+=====================
+
+*/
+
+.header-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+}
+.header-content__title{
+    font-size: 3.5rem;
+}
+.header-content__caption{
+
+}
+.header-content__link{
+    background-color: transparent;
+    border: 3px solid #F00;
+    width: 15rem;
+    height: 7rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    color: #fff;
+    font-size: 2.4rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}

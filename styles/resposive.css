@@ -1,0 +1,82 @@
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+    /*10px;*/
+}
+
+/* do not use rem in media queries use em or px */
+
+
+@media (min-width: 576px) {
+   
+
+}
+@media (min-width:768px) {
+    .nav__btn{
+        display: none;
+    }
+    .container{
+        position: relative;
+    }
+    .menu{
+        position: absolute;
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-start;
+        position: fixed;
+        background: transparent;
+        left: 25%;
+        right: 2.4rem;
+        top: 0;
+        width: auto;
+        height: auto;
+        padding: 2.5rem;
+        
+    }
+
+    .menu__item{
+        margin-left:3rem; 
+        font-size: 1.4rem;
+    }
+    .menu__item--drop-down{
+        position: relative;
+    }
+    .menu__drop-down{
+        position: absolute; 
+        width: 17rem;
+        top: 4rem;
+        right: -3.4rem;
+    }
+
+
+}
+
+@media (min-width:992px) {
+    .menu__item{
+       font-size: 1.6rem;
+   }
+    .menu__drop-down{
+    width: 19rem;
+   }
+
+}
+
+@media (min-width:1200px) {
+    
+}
+
+@media (min-width:1400px) {
+   
+}
+
+@media (max-width: 575px) {
+    .header{
+        max-width: 60rem;
+        background-size: 60rem;
+        background-repeat: no-repeat;
+        
+        /* overflow: hidden; */
+        /* background-position: center; */
+        /* background-position-y: bottom; */
+    }
+}
